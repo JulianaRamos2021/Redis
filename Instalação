@@ -1,6 +1,6 @@
 INSTALAÇÃO REDIS
-
-1. Instalação do docker e docker-compose
+Neste exerc´  o redis será configurado e utilizado  atravé do Docker
+1. Instalação do docker e docker-compose.
 *Efetuado na etapa anterior (ver...)
 
 Docker: https://docs.docker.com/get-docker/
