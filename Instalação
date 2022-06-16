@@ -6,6 +6,7 @@ INSTALAÇÃO REDIS
 Docker: https://docs.docker.com/get-docker/
 Docker-compose: https://docs.docker.com/compose/install/
 
+
 2. Baixar a imagem do redis
 Site oficial: https://redis.io/download.
 
@@ -21,7 +22,7 @@ cd redis                  #Criando a pasta do banco de dados Redis.
 cat > docker-compose.yml  #Criando pasta dentro do banco de dados Redis.
 cat docker-compose.yml    #Adicionando configuração obrigatória.
 
-version: '3.1'   #Não é obrigatório definir versão, para versão atual não informar número da versão.
+version: '3.1'  
 
 services:
 
@@ -66,5 +67,32 @@ juliana@DESKTOP-7M8MQ0P:~/docker-bigdata/redis$ docker-compose up -d
  ⠿ Container redis        Started                                                                                  6.9s
 
 
+#Visualizar logs na linha de comando:
+juliana@DESKTOP-7M8MQ0P:~/docker-bigdata/redis$ docker logs redis
+1:C 16 Jun 2022 15:25:30.416 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1:C 16 Jun 2022 15:25:30.416 # Redis version=7.0.2, bits=64, commit=00000000, modified=0, pid=1, just started
+1:C 16 Jun 2022 15:25:30.416 # Configuration loaded
+1:M 16 Jun 2022 15:25:30.416 * monotonic clock: POSIX clock_gettime
+1:M 16 Jun 2022 15:25:30.417 * Running mode=standalone, port=6379.
+1:M 16 Jun 2022 15:25:30.417 # Server initialized
+1:M 16 Jun 2022 15:25:30.548 * Creating AOF base file appendonly.aof.1.base.rdb on server start
+1:M 16 Jun 2022 15:25:30.680 * Creating AOF incr file appendonly.aof.1.incr.aof on server start
+1:M 16 Jun 2022 15:25:30.680 * Ready to accept connections
 
 
+5. Verificar a versão do Redis
+Digitar comando "docker exec -it redis redis-server --version" na linha de comando.
+
+juliana@DESKTOP-7M8MQ0P:~/docker-bigdata/redis$ docker exec -it redis redis-server --version
+Redis server v=7.0.2 sha=00000000:0 malloc=jemalloc-5.2.1 bits=64 build=6549e5aa8dc87aec
+
+
+6. Acessar o Redis CLI
+*Para esse acesso primeiro é necessário entrar no container através do comando "docker exec -it redis bash":
+
+juliana@DESKTOP-7M8MQ0P:~/docker-bigdata/redis$ docker exec -it redis bash
+root@c55199fe1864:/data#
+
+*Dentro do container vou acessar o redis-cli:
+root@c55199fe1864:/data# redis-cli
+127.0.0.1:6379>
