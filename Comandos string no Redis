@@ -1,0 +1,89 @@
+
+COMANDOS BÁSICOS NO REDIS
+
+O primeiro passo é acessar o cluster através do comando "cd docker-bigdata/redis", em seguida utilizo comando "docker ps" para confirmar se o cluster já está ativo,
+ no exemplo abaixo o retorno demonstra que não está, para ativá-lo uso o comando "docker-compose up -d. Com o cluster ativo posso acessar o container Redis através 
+do comando "docker exec -it redis bash". Por fim acesso o redis-cli através do comando "redis-cli".
+
+juliana@DESKTOP-7M8MQ0P:~$ cd docker-bigdata/redis
+juliana@DESKTOP-7M8MQ0P:~/docker-bigdata/redis$ docker ps
+CONTAINER ID   IMAGE                   COMMAND                  CREATED             STATUS             PORTS                                                                NAMES
+juliana@DESKTOP-7M8MQ0P:~/docker-bigdata/redis$ docker-compose up -d
+[+] Running 1/1
+ ⠿ Container redis  Started
+juliana@DESKTOP-7M8MQ0P:~/docker-bigdata/redis$ docker exec -it redis bash
+root@3622b27e2381:/data# redis-cli
+127.0.0.1:6379>
+
+
+
+1. Criar a chave "usuario:nome" e atribua o valor do seu nome
+
+127.0.0.1:6379> SET usuario:nome Juliana
+OK
+
+2. Criar a chave "usuario:sobrenome" e atribua o valor do seu sobrenome
+
+127.0.0.1:6379> SET usuario:sobrenome Ramos
+OK
+
+3. Busque a chave "usuario:nome“
+
+127.0.0.1:6379> get usuario:nome
+"Juliana"
+
+4. Verificar o tamanho da chave "usuario:nome“
+
+127.0.0.1:6379> strlen usuario:nome
+(integer) 7
+
+5. Verificar o tipo da chave "usuario:sobrenome"
+
+127.0.0.1:6379> type usuario:sobrenome
+string
+
+6. Criar a chave "views:qtd" e atribua o valor 100
+
+127.0.0.1:6379> set view:qtd 100
+OK
+
+7. Incremente o valor em 10 da chave "views:qtd"
+
+127.0.0.1:6379> incrby views:qtd 10
+(integer) 110
+
+8. Busque a chave "views:qtd"
+
+127.0.0.1:6379> get views:qtd
+"110"
+
+9. Deletar a chave "usuario:sobrenome"
+
+127.0.0.1:6379> del usuario:sobrenome
+(integer) 1
+
+10. Verificar se a chave "usuario:sobrenome" existe
+
+127.0.0.1:6379> exists usuario:sobrenome
+(integer) 0
+
+11. Definir um tempo de 3600 segundos para a chave "views:qtd" ser removida
+
+127.0.0.1:6379> expire views:qtd 3600
+(integer) 1
+
+
+12. Verificar quanto tempo falta para a chave "views:qtd" ser removida
+
+127.0.0.1:6379> ttl views:qtd
+(integer) 3422
+
+13. Verificar a persistência da chave "usuario:nome"
+
+127.0.0.1:6379> ttl usuario:nome
+(integer) -1
+
+14. Definir para a chave "views:qtd" ter persistência para sempre
+
+127.0.0.1:6379> persist views:qtd
+(integer) 1
