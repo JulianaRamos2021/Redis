@@ -1,4 +1,5 @@
-# Redis![image](https://user-images.githubusercontent.com/78691172/174131461-4c306dbe-1fbe-4098-bca0-18b1a6dd49d4.png)
+![image](https://user-images.githubusercontent.com/78691172/174131694-2befa329-c6ba-4f7a-829b-4ad453781097.png)
+
 
 Criando e configurando banco de dados Redis
 
