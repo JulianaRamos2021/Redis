@@ -1,0 +1,70 @@
+INSTALAÇÃO REDIS
+
+1. Instalação do docker e docker-compose
+*Efetuado na etapa anterior (ver...)
+
+Docker: https://docs.docker.com/get-docker/
+Docker-compose: https://docs.docker.com/compose/install/
+
+2. Baixar a imagem do redis
+Site oficial: https://redis.io/download.
+
+Download da imagem: https:hub.docker.com/_/redis
+
+Colar o comando "docker pull redis" em terminal com acesso ao docker. (É necessário que o cluster de big data já esteja ativo)
+
+
+Nesta etapa aproveitei para criar a estrutura de pastas do banco de dados-
+Comandos no terminal com acesso ao docker:
+cd docker-bigdata         #Acessando meu cluster de bigdata
+cd redis                  #Criando a pasta do banco de dados Redis.
+cat > docker-compose.yml  #Criando pasta dentro do banco de dados Redis.
+cat docker-compose.yml    #Adicionando configuração obrigatória.
+
+version: '3.1'   #Não é obrigatório definir versão, para versão atual não informar número da versão.
+
+services:
+
+  redis:
+    container_name: redis
+    image: redis
+    ports:
+      - 6379:6379
+    volumes:
+      - data:/data
+    entrypoint: redis-server --appendonly yes
+    restart: always      
+
+volumes:
+  data:
+
+#Veja como ficou esse exercício na linha de comando:
+juliana@DESKTOP-7M8MQ0P:~/docker-bigdata/redis$ docker pull redis
+Using default tag: latest
+latest: Pulling from library/redis
+Get "https://registry-1.docker.io/v2/library/redis/manifests/sha256:724ea5177e7d07426eea81233896eee4ff37f594097fcb317fac0b67508036ed": EOF
+juliana@DESKTOP-7M8MQ0P:~/docker-bigdata/redis$
+
+
+3. Iniciar o Redis através do docker-compose
+Utilei comando docker-compose up -d
+
+
+#Veja como ficou esse exercício na linha de comando:
+juliana@DESKTOP-7M8MQ0P:~/docker-bigdata/redis$ docker-compose up -d
+[+] Running 7/7
+ ⠿ redis Pulled                                                                                                  124.9s
+   ⠿ 42c077c10790 Pull complete                                                                                  110.2s
+   ⠿ a300d83d65f9 Pull complete                                                                                  110.8s
+   ⠿ ebdc3afaab5c Pull complete                                                                                  111.5s
+   ⠿ 6ce178c713e4 Pull complete                                                                                  112.7s
+   ⠿ 949f9d8f429f Pull complete                                                                                  113.2s
+   ⠿ 4076be5e5074 Pull complete                                                                                  113.7s
+[+] Running 3/3
+ ⠿ Network redis_default  Created                                                                                  0.6s
+ ⠿ Volume "redis_data"    Created                                                                                  0.2s
+ ⠿ Container redis        Started                                                                                  6.9s
+
+
+
+
