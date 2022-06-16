@@ -1,4 +1,5 @@
-# Redis
+# Redis![image](https://user-images.githubusercontent.com/78691172/174131461-4c306dbe-1fbe-4098-bca0-18b1a6dd49d4.png)
+
 Criando e configurando banco de dados Redis
 
 Redis é um servidor de estruturas de dados chave-valor que fornece suporte a diferentes tipos de valores. Indicado para aplicações com alta exigência de resposta rápida e processamento dinâmico. Aceita estruturas mais complexas como string, listas, sets, sets ordenados, streams, hyperloglogs e hash.
