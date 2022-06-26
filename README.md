@@ -36,19 +36,36 @@ Comando: smembers pesquisa:produto
 5. Verificar se existe o valor monitor
 Comando: sismember pesquisa:produto monitor
 ![image](https://user-images.githubusercontent.com/78691172/175815280-3c8415a2-def1-4588-a835-cac5701fbc68.png)
+
 *O retorno 1 significa que o valor existe, retorno 0 significa que não existe.
 
 6. Remover o valor monitor
 Comando: srem pesquisa:produto monitor
 ![image](https://user-images.githubusercontent.com/78691172/175815350-fcf5e656-b273-487c-b449-1731c26c27b6.png)
+
 *Retorno 1 significa que o valor foi excluído.
 
 7. Recuperar um elemento e remove-lo do set
+Comando: spop pesquisa:produto
+![image](https://user-images.githubusercontent.com/78691172/175815545-6e0daccc-69c1-4891-917d-8fc74174137f.png)
+
 
 8. Criar a chave "pesquisa:desconto“ do tipo set com os seguintes valores: memória RAM, monitor, teclado, HD
+Comando: sadd pesquisa:desconto 'memoria RAM' monitor teclado HD
+![image](https://user-images.githubusercontent.com/78691172/175815616-808fb3d1-59f4-4ab0-a68a-2050deae244e.png)
 
 9. Próximas questões fazem uso dos sets pesquisa:produto e pesquisa:desconto
 
 Visualizar a interseção entre os 2 sets
+Comando: sinter pesquisa:produto pesquisa:desconto
+![image](https://user-images.githubusercontent.com/78691172/175815745-d813a691-7643-4a17-9f94-6cad356b1385.png)
+
+*No meu resultado não foi gerada interseção pois não existem valores iguais dentro das chaves.
+
+
 Visualizar a diferença entre os 2 sets
+Comando:sdiff pesquisa:produto pesquisa:desconto
+![image](https://user-images.githubusercontent.com/78691172/175815832-97f41c6a-594f-462b-b79d-f3f6e448d5ba.png)
+
+
 Criar o set "pesquisa:produto_desconto" com a união entre os 2 sets
