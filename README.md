@@ -275,11 +275,20 @@ publish noticias:sp 'Msg 3'
 
 
 #### 3. Cancelar o assinante do canal noticias:sp
+CTRL + C
 
 #### 4. Criar um assinante para receber as mensagens dos canais com o padrão noticias:*
 
+Comando:psubscribe noticias:*
+
+![image](https://user-images.githubusercontent.com/78691172/175829330-bff07a18-a2ae-42b2-9e7e-030df941a7fa.png)
+
 #### 5. Criar um editor para enviar as seguintes mensagens no canal noticias:rj
 
-Msg 4
-Msg 5
-Msg 6
+Msg 4  
+Msg 5  
+Msg 6  
+
+
+![image](https://user-images.githubusercontent.com/78691172/175829448-2597f7be-ea80-4615-804d-6b8c24469a68.png)
+
