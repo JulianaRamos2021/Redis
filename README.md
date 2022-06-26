@@ -226,8 +226,25 @@ Comando: hstrlen usuario:100 nome
 
 #### 7. Incrementar em 2 o valor do campo views
 
+Comando:  hincrby usuario:100 views 2
+
+![image](https://user-images.githubusercontent.com/78691172/175826840-24ab42a5-6628-4b70-8a31-a7584fb11be7.png)
+
 #### 8. Visualizar apenas os campos
+
+Comando: hkeys usuario:100
+
+![image](https://user-images.githubusercontent.com/78691172/175826917-0dedb9ad-b151-46f1-a9dc-aa1a1e60a63e.png)
+
 
 #### 9. Visualizar apenas os valores
 
-10. Deletar o campo estado
+Comando: hvals usuario:100
+
+![image](https://user-images.githubusercontent.com/78691172/175827012-af661ab4-f6a1-454a-bd8d-1536b1b15f1e.png)
+
+#### 10. Deletar o campo estado
+
+Comando: hdel usuario:100 estado
+
+![image](https://user-images.githubusercontent.com/78691172/175827068-d669442a-1d42-402a-bb8b-3cba747276e2.png)
