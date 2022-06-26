@@ -117,13 +117,25 @@ Comando: zrevrank pesquisa:produto teclado
 ![image](https://user-images.githubusercontent.com/78691172/175817690-81efc296-cbe7-460b-a77e-db45a0aaeac7.png)
 
 4. Visualizar o score do produto teclado
+Comando: zscore pesquisa:produto teclado
+![image](https://user-images.githubusercontent.com/78691172/175817756-88949cc3-a979-4699-99eb-3bda52ccf0b2.png)
 
 5. Remover o valor HD da chave
+Comando:  zrem pesquisa:produto HD
+![image](https://user-images.githubusercontent.com/78691172/175817796-df8f4924-548d-4fc9-948e-e3c62cc1e72f.png)
+
+*O resultado 1 significa que foi removido.
 
 6. Recuperar e remover do set o produto mais pesquisado
+Comando:  zpopmax pesquisa:produto  
+![image](https://user-images.githubusercontent.com/78691172/175817869-3a983813-a5be-4a93-928f-d96620fcfb3c.png)
 
 7. Recuperar e remover do set o produto menos pesquisado
+Comando: zpopmin pesquisa:produto
+![image](https://user-images.githubusercontent.com/78691172/175817925-c6ddc700-1fd2-40f3-b543-2c3ed75ff648.png)
 
 8. Visualizar todos os produtos
+Comando: zrange pesquisa:produto -1 0
+![image](https://user-images.githubusercontent.com/78691172/175817997-9cae67dd-eef0-42d8-89e0-99ca76e7c115.png)
 
 
