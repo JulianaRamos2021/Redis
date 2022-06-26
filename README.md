@@ -80,8 +80,9 @@ Comando: sunionstore pesquisa:produto_desconto pesquisa:produto pesquisa:descont
 
 
 
-##SETS ORDENADOS
-###Primeiro vamos limpar a chave que já existe
+## SETS ORDENADOS
+
+### Primeiro vamos limpar a chave que já existe
 
 1. Deletar a chave "pesquisa:produto"
 Comando:del pesquisa:produto
