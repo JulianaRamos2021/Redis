@@ -289,6 +289,10 @@ Msg 4
 Msg 5  
 Msg 6  
 
+Comando: publish noticias:rj 'Msg 4'
+publish noticias:rj 'Msg 5'
+publish noticias:rj 'Msg 6'
+
 
 ![image](https://user-images.githubusercontent.com/78691172/175829448-2597f7be-ea80-4615-804d-6b8c24469a68.png)
 
