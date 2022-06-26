@@ -69,3 +69,5 @@ Comando:sdiff pesquisa:produto pesquisa:desconto
 
 
 Criar o set "pesquisa:produto_desconto" com a união entre os 2 sets
+Comando: sunionstore pesquisa:produto_desconto pesquisa:produto pesquisa:desconto
+![image](https://user-images.githubusercontent.com/78691172/175816022-b8a57d9b-aefd-4cba-be88-bb04eab73d3d.png)
