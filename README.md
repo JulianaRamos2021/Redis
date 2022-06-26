@@ -248,3 +248,38 @@ Comando: hvals usuario:100
 Comando: hdel usuario:100 estado
 
 ![image](https://user-images.githubusercontent.com/78691172/175827068-d669442a-1d42-402a-bb8b-3cba747276e2.png)
+
+
+
+
+## Exercícios Publish e Subscribe
+
+#### 1. Criar um assinante para receber as mensagens do canal noticias:sp
+
+Comando: subscribe noticias:sp
+
+![image](https://user-images.githubusercontent.com/78691172/175828847-a775f6ae-7080-4c27-b849-acac7d310849.png)
+
+
+#### 2. Criar um editor para enviar as seguintes mensagens no canal noticias:sp
+
+Msg 1
+Msg 2
+Msg 3
+
+Comando: publish noticias:sp 'Msg 1'
+publish noticias:sp 'Msg 2'
+publish noticias:sp 'Msg 3'
+
+![image](https://user-images.githubusercontent.com/78691172/175829025-3984b477-1b0b-4d4d-b72f-f5dbcfa9e4a5.png)
+
+
+#### 3. Cancelar o assinante do canal noticias:sp
+
+#### 4. Criar um assinante para receber as mensagens dos canais com o padrão noticias:*
+
+#### 5. Criar um editor para enviar as seguintes mensagens no canal noticias:rj
+
+Msg 4
+Msg 5
+Msg 6
