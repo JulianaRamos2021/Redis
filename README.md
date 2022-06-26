@@ -21,6 +21,7 @@ Comando: del pesquisa:produto
 
 2. Criar a chave "pesquisa:produto" do tipo set com os seguintes valores: monitor, mouse e teclado
 Comando: sadd pesquisa:produto monitor mouse teclado
+
 ![image](https://user-images.githubusercontent.com/78691172/175815037-4d848ade-2010-433c-9e2d-8a260b3b09e0.png)
 
 
