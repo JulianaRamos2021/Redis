@@ -12,6 +12,8 @@ Redis é um servidor de estruturas de dados chave-valor que fornece suporte a di
 
 1. Deletar a chave “pesquisa:produto”  
 Comando: del pesquisa:produto
+
+
 ![image](https://user-images.githubusercontent.com/78691172/175814955-90453912-4cab-43b2-b830-60d20e9d87d0.png)
 
 *O zero significa que a chave não existe, se o resultado for 1 então a chave foi deletada.
