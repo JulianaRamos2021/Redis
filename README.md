@@ -1,14 +1,14 @@
 ![image](https://user-images.githubusercontent.com/78691172/174131694-2befa329-c6ba-4f7a-829b-4ad453781097.png)
 
 
-Criando e configurando banco de dados Redis
+#Criando e configurando banco de dados Redis
 
 Redis é um servidor de estruturas de dados chave-valor que fornece suporte a diferentes tipos de valores. Indicado para aplicações com alta exigência de resposta rápida e processamento dinâmico. Aceita estruturas mais complexas como string, listas, sets, sets ordenados, streams, hyperloglogs e hash.
 É indicado o uso de chaves simples com no máximo 1 MB. É indicado instanciar as chaves e evitar abreviações, exemplo de chave adequada: "object-type:id".
 
 
 
-# Exercícios -SETS
+## Exercícios -SETS
 
 1. Deletar a chave “pesquisa:produto”
 Comando: del pesquisa:produto
@@ -73,3 +73,48 @@ Criar o set "pesquisa:produto_desconto" com a união entre os 2 sets
 Comando: sunionstore pesquisa:produto_desconto pesquisa:produto pesquisa:desconto
 
 ![image](https://user-images.githubusercontent.com/78691172/175816022-b8a57d9b-aefd-4cba-be88-bb04eab73d3d.png)
+
+
+
+
+
+
+
+##SETS ORDENADOS
+###Primeiro vamos limpar a chave que já existe
+
+1. Deletar a chave "pesquisa:produto"
+Comando:del pesquisa:produto
+![image](https://user-images.githubusercontent.com/78691172/175817088-cf376aae-699c-489b-a1a8-7fc35ffb5f60.png)
+
+*O retorno 1 significa que foi deletado.
+
+2. Criar a chave "pesquisa:produto" do tipo set ordenado com os seguintes valores:
+
+Valor: monitor, Score: 100
+Valor: HD, Score: 20
+Valor: mouse, Score: 10
+Valor: teclado, Score: 50
+O score representa a quantidade de pesquisas feitas para aquele produto na aplicação
+
+Comando: zadd pesquisa:produto 100 monitor 200 HD 10 mouse 50 teclado
+![image](https://user-images.githubusercontent.com/78691172/175817287-07bc3496-0e5a-4676-aa63-5271851b9ad7.png)
+
+
+1. Visualizar a quantidade de produtos
+
+2. Visualizar todos os produtos do mais pesquisado ao menos pesquisado
+
+3. Visualizar o rank do produto teclado
+
+4. Visualizar o score do produto teclado
+
+5. Remover o valor HD da chave
+
+6. Recuperar e remover do set o produto mais pesquisado
+
+7. Recuperar e remover do set o produto menos pesquisado
+
+8. Visualizar todos os produtos
+
+
