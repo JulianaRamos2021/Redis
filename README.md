@@ -30,8 +30,12 @@ Comando: scard pesquisa:produto
 ![image](https://user-images.githubusercontent.com/78691172/175815068-0541baa3-4d32-4155-94df-424cbeae2404.png)
 
 4. Retornar todos os elementos da chave
+Comando: smembers pesquisa:produto
+![image](https://user-images.githubusercontent.com/78691172/175815210-c46e1b30-dff5-4e35-bd23-2f7e2a35ec6c.png)
 
 5. Verificar se existe o valor monitor
+Comando: sismember pesquisa:produto monitor
+![image](https://user-images.githubusercontent.com/78691172/175815280-3c8415a2-def1-4588-a835-cac5701fbc68.png)
 
 6. Remover o valor monitor
 
