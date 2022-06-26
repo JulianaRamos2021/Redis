@@ -21,6 +21,7 @@ Comando: del pesquisa:produto
 
 2. Criar a chave "pesquisa:produto" do tipo set com os seguintes valores: monitor, mouse e teclado
 Comando: sadd pesquisa:produto monitor mouse teclado
+
 ![image](https://user-images.githubusercontent.com/78691172/175815037-4d848ade-2010-433c-9e2d-8a260b3b09e0.png)
 
 
@@ -51,6 +52,7 @@ Comando: spop pesquisa:produto
 
 8. Criar a chave "pesquisa:desconto“ do tipo set com os seguintes valores: memória RAM, monitor, teclado, HD
 Comando: sadd pesquisa:desconto 'memoria RAM' monitor teclado HD
+
 ![image](https://user-images.githubusercontent.com/78691172/175815616-808fb3d1-59f4-4ab0-a68a-2050deae244e.png)
 
 9. Próximas questões fazem uso dos sets pesquisa:produto e pesquisa:desconto
@@ -69,4 +71,5 @@ Comando:sdiff pesquisa:produto pesquisa:desconto
 
 Criar o set "pesquisa:produto_desconto" com a união entre os 2 sets
 Comando: sunionstore pesquisa:produto_desconto pesquisa:produto pesquisa:desconto
+
 ![image](https://user-images.githubusercontent.com/78691172/175816022-b8a57d9b-aefd-4cba-be88-bb04eab73d3d.png)
