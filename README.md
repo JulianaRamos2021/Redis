@@ -147,7 +147,7 @@ Comando: del usuario:100
 ![image](https://user-images.githubusercontent.com/78691172/175825776-ba69e419-0341-4d93-a76c-ca88e9a149a4.png)
 
 
-*O resultado zero significa que a chave não foi deletada, isso ocorreu devido ela não existir.
+* O resultado zero significa que a chave não foi deletada, isso ocorreu devido ela não existir.
 
 2. Criar uma chave “usuario:100” do tipo hash com a seguinte estrutura
 
@@ -163,10 +163,17 @@ Comando: hgetall usuario:100
 ![image](https://user-images.githubusercontent.com/78691172/175825900-d7818225-610a-43aa-9a8a-7a17dfa43e5d.png)
 
 4. Contar a quantidade de campos
+Comando: hlen usuario:100
+![image](https://user-images.githubusercontent.com/78691172/175825964-1ee97e4f-93c6-428d-9d98-e16efd885278.png)
 
 5. Visualizar apenas o nome e views
+Comando:  hmget usuario:100 nome views
+![image](https://user-images.githubusercontent.com/78691172/175826047-ee02f2fa-1658-4a98-95ec-7469de2629fc.png)
 
 6. Contar o tamanho do valor do campo nome
+Comando: hstrlen usuario:100 nome
+![image](https://user-images.githubusercontent.com/78691172/175826120-49d56305-4a14-42b7-949a-f77e4b50068e.png)
+
 
 7. Incrementar em 2 o valor do campo views
 
