@@ -48,7 +48,7 @@ juliana@DESKTOP-7M8MQ0P:~/docker-bigdata/redis$
 
 
 3. Iniciar o Redis através do docker-compose
-Utilei comando docker-compose up -d
+Digitei comando docker-compose up -d
 
 
 #Veja como ficou esse exercício na linha de comando:
