@@ -10,7 +10,7 @@ Redis é um servidor de estruturas de dados chave-valor que fornece suporte a di
 
 ## Exercícios -SETS
 
-1. Deletar a chave “pesquisa:produto”  
+#### 1. Deletar a chave “pesquisa:produto”  
 Comando: del pesquisa:produto
 
 
