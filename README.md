@@ -1,7 +1,7 @@
 ![image](https://user-images.githubusercontent.com/78691172/174131694-2befa329-c6ba-4f7a-829b-4ad453781097.png)
 
 
-#Criando e configurando banco de dados Redis
+# Criando e configurando banco de dados Redis
 
 Redis é um servidor de estruturas de dados chave-valor que fornece suporte a diferentes tipos de valores. Indicado para aplicações com alta exigência de resposta rápida e processamento dinâmico. Aceita estruturas mais complexas como string, listas, sets, sets ordenados, streams, hyperloglogs e hash.
 É indicado o uso de chaves simples com no máximo 1 MB. É indicado instanciar as chaves e evitar abreviações, exemplo de chave adequada: "object-type:id".
@@ -80,9 +80,9 @@ Comando: sunionstore pesquisa:produto_desconto pesquisa:produto pesquisa:descont
 
 
 
-## SETS ORDENADOS
+## Exercícios SETS ORDENADOS
 
-### Primeiro vamos limpar a chave que já existe
+### Primeiro vamos limpar a chave que já existe e criar uma nova
 
 1. Deletar a chave "pesquisa:produto"
 Comando:del pesquisa:produto
@@ -102,11 +102,19 @@ Comando: zadd pesquisa:produto 100 monitor 200 HD 10 mouse 50 teclado
 ![image](https://user-images.githubusercontent.com/78691172/175817287-07bc3496-0e5a-4676-aa63-5271851b9ad7.png)
 
 
+### Agora podemos iniciar
 1. Visualizar a quantidade de produtos
+Comando: zcard pesquisa:produto
+![image](https://user-images.githubusercontent.com/78691172/175817530-141cbe9c-e89e-410d-a7c5-bc272ee864a6.png)
 
 2. Visualizar todos os produtos do mais pesquisado ao menos pesquisado
+Comando: zrevrange pesquisa:produto 0 -1
+![image](https://user-images.githubusercontent.com/78691172/175817631-0bcc4af1-6da8-4abb-8ac9-523c548a8302.png)
+
 
 3. Visualizar o rank do produto teclado
+Comando: zrevrank pesquisa:produto teclado
+![image](https://user-images.githubusercontent.com/78691172/175817690-81efc296-cbe7-460b-a77e-db45a0aaeac7.png)
 
 4. Visualizar o score do produto teclado
 
