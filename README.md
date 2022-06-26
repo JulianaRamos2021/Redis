@@ -263,13 +263,13 @@ Comando: subscribe noticias:sp
 
 #### 2. Criar um editor para enviar as seguintes mensagens no canal noticias:sp
 
-Msg 1
-Msg 2
-Msg 3
+Msg 1  
+Msg 2  
+Msg 3  
 
-Comando: publish noticias:sp 'Msg 1'
-publish noticias:sp 'Msg 2'
-publish noticias:sp 'Msg 3'
+Comando: publish noticias:sp 'Msg 1'  
+publish noticias:sp 'Msg 2'  
+publish noticias:sp 'Msg 3'  
 
 ![image](https://user-images.githubusercontent.com/78691172/175829025-3984b477-1b0b-4d4d-b72f-f5dbcfa9e4a5.png)
 
