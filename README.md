@@ -139,3 +139,39 @@ Comando: zrange pesquisa:produto -1 0
 ![image](https://user-images.githubusercontent.com/78691172/175817997-9cae67dd-eef0-42d8-89e0-99ca76e7c115.png)
 
 
+
+## Exercícios Hashes
+
+1. Deletar a chave “usuario:100”
+Comando: del usuario:100
+![image](https://user-images.githubusercontent.com/78691172/175825776-ba69e419-0341-4d93-a76c-ca88e9a149a4.png)
+
+
+*O resultado zero significa que a chave não foi deletada, isso ocorreu devido ela não existir.
+
+2. Criar uma chave “usuario:100” do tipo hash com a seguinte estrutura
+
+nome – Augusto
+estado – SP
+views – 10
+
+Comando: hmset usuario:100 nome Augusto estado SP views 10
+![image](https://user-images.githubusercontent.com/78691172/175825838-dd6eb6fe-0213-4e3a-9d4a-c015181cf924.png)
+
+3. Visualizar todas as chaves e valores
+Comando: hgetall usuario:100
+![image](https://user-images.githubusercontent.com/78691172/175825900-d7818225-610a-43aa-9a8a-7a17dfa43e5d.png)
+
+4. Contar a quantidade de campos
+
+5. Visualizar apenas o nome e views
+
+6. Contar o tamanho do valor do campo nome
+
+7. Incrementar em 2 o valor do campo views
+
+8. Visualizar apenas os campos
+
+9. Visualizar apenas os valores
+
+10. Deletar o campo estado
