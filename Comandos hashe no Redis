@@ -1,0 +1,61 @@
+
+## Exercícios Hashes
+
+#### 1. Deletar a chave “usuario:100”
+
+Comando: del usuario:100
+
+
+* O resultado zero significa que a chave não foi deletada, isso ocorreu devido ela não existir.
+
+#### 2. Criar uma chave “usuario:100” do tipo hash com a seguinte estrutura
+
+nome – Augusto
+estado – SP
+views – 10
+
+Comando: hmset usuario:100 nome Augusto estado SP views 10
+
+
+#### 3. Visualizar todas as chaves e valores
+
+Comando: hgetall usuario:100
+
+
+#### 4. Contar a quantidade de campos
+
+Comando: hlen usuario:100
+
+
+#### 5. Visualizar apenas o nome e views
+
+Comando:  hmget usuario:100 nome views
+
+
+#### 6. Contar o tamanho do valor do campo nome
+
+Comando: hstrlen usuario:100 nome
+
+
+
+#### 7. Incrementar em 2 o valor do campo views
+
+Comando:  hincrby usuario:100 views 2
+
+
+#### 8. Visualizar apenas os campos
+
+Comando: hkeys usuario:100
+
+
+
+#### 9. Visualizar apenas os valores
+
+Comando: hvals usuario:100
+
+
+#### 10. Deletar o campo estado
+
+Comando: hdel usuario:100 estado
+
+
