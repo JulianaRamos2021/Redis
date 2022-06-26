@@ -36,8 +36,12 @@ Comando: smembers pesquisa:produto
 5. Verificar se existe o valor monitor
 Comando: sismember pesquisa:produto monitor
 ![image](https://user-images.githubusercontent.com/78691172/175815280-3c8415a2-def1-4588-a835-cac5701fbc68.png)
+*O retorno 1 significa que o valor existe, retorno 0 significa que não existe.
 
 6. Remover o valor monitor
+Comando: srem pesquisa:produto monitor
+![image](https://user-images.githubusercontent.com/78691172/175815350-fcf5e656-b273-487c-b449-1731c26c27b6.png)
+*Retorno 1 significa que o valor foi excluído.
 
 7. Recuperar um elemento e remove-lo do set
 
