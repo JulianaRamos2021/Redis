@@ -111,7 +111,7 @@ Comando:del pesquisa:produto
 
 *O retorno 1 significa que foi deletado.  
 
-2. Criar a chave "pesquisa:produto" do tipo set ordenado com os seguintes valores:
+#### 2. Criar a chave "pesquisa:produto" do tipo set ordenado com os seguintes valores:
 
 Valor: monitor, Score: 100
 Valor: HD, Score: 20
@@ -119,87 +119,115 @@ Valor: mouse, Score: 10
 Valor: teclado, Score: 50
 O score representa a quantidade de pesquisas feitas para aquele produto na aplicação
 
-Comando: zadd pesquisa:produto 100 monitor 200 HD 10 mouse 50 teclado
+#### Comando: zadd pesquisa:produto 100 monitor 200 HD 10 mouse 50 teclado
+
 ![image](https://user-images.githubusercontent.com/78691172/175817287-07bc3496-0e5a-4676-aa63-5271851b9ad7.png)    
 
 
 ### Agora podemos iniciar
 1. Visualizar a quantidade de produtos
+
 Comando: zcard pesquisa:produto
+
 ![image](https://user-images.githubusercontent.com/78691172/175817530-141cbe9c-e89e-410d-a7c5-bc272ee864a6.png)  
 
-2. Visualizar todos os produtos do mais pesquisado ao menos pesquisado
+#### 2. Visualizar todos os produtos do mais pesquisado ao menos pesquisado
+
 Comando: zrevrange pesquisa:produto 0 -1
+
 ![image](https://user-images.githubusercontent.com/78691172/175817631-0bcc4af1-6da8-4abb-8ac9-523c548a8302.png)  
 
 
-3. Visualizar o rank do produto teclado
+#### 3. Visualizar o rank do produto teclado
+
 Comando: zrevrank pesquisa:produto teclado
+
 ![image](https://user-images.githubusercontent.com/78691172/175817690-81efc296-cbe7-460b-a77e-db45a0aaeac7.png)  
 
-4. Visualizar o score do produto teclado
+#### 4. Visualizar o score do produto teclado
+
 Comando: zscore pesquisa:produto teclado
+
 ![image](https://user-images.githubusercontent.com/78691172/175817756-88949cc3-a979-4699-99eb-3bda52ccf0b2.png)  
 
-5. Remover o valor HD da chave
+#### 5. Remover o valor HD da chave
+
 Comando:  zrem pesquisa:produto HD
+
 ![image](https://user-images.githubusercontent.com/78691172/175817796-df8f4924-548d-4fc9-948e-e3c62cc1e72f.png)
 
 *O resultado 1 significa que foi removido.  
 
-6. Recuperar e remover do set o produto mais pesquisado
+#### 6. Recuperar e remover do set o produto mais pesquisado
+
 Comando:  zpopmax pesquisa:produto  
+
 ![image](https://user-images.githubusercontent.com/78691172/175817869-3a983813-a5be-4a93-928f-d96620fcfb3c.png)  
 
-7. Recuperar e remover do set o produto menos pesquisado
+#### 7. Recuperar e remover do set o produto menos pesquisado
+
 Comando: zpopmin pesquisa:produto
+
 ![image](https://user-images.githubusercontent.com/78691172/175817925-c6ddc700-1fd2-40f3-b543-2c3ed75ff648.png)  
 
-8. Visualizar todos os produtos
+#### 8. Visualizar todos os produtos
+
 Comando: zrange pesquisa:produto -1 0
+
 ![image](https://user-images.githubusercontent.com/78691172/175817997-9cae67dd-eef0-42d8-89e0-99ca76e7c115.png)    
 
 
 
 ## Exercícios Hashes
 
-1. Deletar a chave “usuario:100”
+#### 1. Deletar a chave “usuario:100”
+
 Comando: del usuario:100
+
 ![image](https://user-images.githubusercontent.com/78691172/175825776-ba69e419-0341-4d93-a76c-ca88e9a149a4.png)  
 
 
 * O resultado zero significa que a chave não foi deletada, isso ocorreu devido ela não existir.
 
-2. Criar uma chave “usuario:100” do tipo hash com a seguinte estrutura
+#### 2. Criar uma chave “usuario:100” do tipo hash com a seguinte estrutura
 
 nome – Augusto
 estado – SP
 views – 10
 
 Comando: hmset usuario:100 nome Augusto estado SP views 10
+
 ![image](https://user-images.githubusercontent.com/78691172/175825838-dd6eb6fe-0213-4e3a-9d4a-c015181cf924.png)  
 
-3. Visualizar todas as chaves e valores
+#### 3. Visualizar todas as chaves e valores
+
 Comando: hgetall usuario:100
+
 ![image](https://user-images.githubusercontent.com/78691172/175825900-d7818225-610a-43aa-9a8a-7a17dfa43e5d.png)  
 
-4. Contar a quantidade de campos
+#### 4. Contar a quantidade de campos
+
 Comando: hlen usuario:100
+
 ![image](https://user-images.githubusercontent.com/78691172/175825964-1ee97e4f-93c6-428d-9d98-e16efd885278.png)  
 
-5. Visualizar apenas o nome e views
+#### 5. Visualizar apenas o nome e views
+
 Comando:  hmget usuario:100 nome views
+
 ![image](https://user-images.githubusercontent.com/78691172/175826047-ee02f2fa-1658-4a98-95ec-7469de2629fc.png)  
 
-6. Contar o tamanho do valor do campo nome
+#### 6. Contar o tamanho do valor do campo nome
+
 Comando: hstrlen usuario:100 nome
+
 ![image](https://user-images.githubusercontent.com/78691172/175826120-49d56305-4a14-42b7-949a-f77e4b50068e.png)  
 
 
-7. Incrementar em 2 o valor do campo views
+#### 7. Incrementar em 2 o valor do campo views
 
-8. Visualizar apenas os campos
+#### 8. Visualizar apenas os campos
 
-9. Visualizar apenas os valores
+#### 9. Visualizar apenas os valores
 
 10. Deletar o campo estado
