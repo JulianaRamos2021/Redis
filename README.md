@@ -178,6 +178,8 @@ Comando: zrange pesquisa:produto -1 0
 
 
 
+
+
 ## Exercícios Hashes
 
 #### 1. Deletar a chave “usuario:100”
